@@ -1,0 +1,65 @@
+*{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+}
+#mask {
+	overflow:hidden;/*指定如果内容溢出元素的框，内容会被修剪，并且其余内容是不可见的。*/
+	height:3600px;
+}
+#slider ul {
+	position:relative;
+}
+#slider li {
+	width:800px;
+	height:3600px;
+	position:absolute;
+
+}
+
+@keyframes animation1 {
+	0%  { top:0px; }/*初始状态*/
+	20% { top:0px; }/*停留了一会儿时间*/
+	40% { top:360px;  }/*向下移动了*/
+	100% { top:720px; }
+}
+@keyframes animation2 {
+	0%  { top:-360px; }/*初始状态*/
+	20% { top:-360px; }/*停留了一会儿时间*/
+	40% { top:0px;}/*向下移动了*/
+	60% { top:0px;}/*停留了一会儿时间*/
+	80% { top:360px;}/*向下移动了*/
+	100% { top:360px; }/*停留了一会儿时间*/
+}
+@keyframes animation3 {
+	0%  { top:-720px; }
+	60% { top:-360px; }
+	80% { top:0px; }/*向下移动了*/
+	100% { top:0px;}/*停留了一会儿时间*/
+}
+
+#slider {
+	height:3600px;
+	width:800px;
+	margin:40px auto 0;
+	overflow:visible;
+	position:relative;
+}
+
+
+#first {
+	animation:animation1 15s linear infinite;/*调用动画，整个动画循环一次时长15s，无限次循环*/
+}
+#second {
+	animation:animation2 15s linear infinite;
+}
+#third {
+	animation:animation3 15s linear infinite;
+}
+#slider:hover li
+ {
+	animation-play-state:paused;/*设置超链接伪类，当鼠标悬停在列表项目上的图片上时，动画暂停*/
+}
+

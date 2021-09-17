@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+.fullpage {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.pc_page_swiper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pc_page_swiper .swiper-container {
+	/* position: absolute; */
+}
+
+li {
+	width: 100%;
+	position: absolute;
+	/*一定要设置这个*/
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 4;
+}
+
+.pc_first_page_img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.pc_second_page_img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.pc_first_page_img img,
+.pc_second_page_img img {
+	width: 100%;
+	height: 100%;
+}
+
+.pc_first_page_info {
+	position: absolute;
+	text-align: right;
+	z-index: 10;
+}
+
+.pc_first_page_info h3 {
+	color: #7a356a;
+	font-size: 100px;
+	margin-bottom: 29px;
+}
+
+.pc_first_page_info h5 {
+	color: #8a6499;
+	font-size: 48px;
+}
+
+.pc_second_page {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.pc_first_page_arrow {
+	width: 20px;
+	position: absolute;
+	bottom: 50px;
+	z-index: 10;
+	cursor: pointer;
+	animation-name: beat;
+	/*动画名称*/
+	animation-duration: .5s;
+	/*设置秒数*/
+	animation-timing-function: linear;
+	/*速度曲线*/
+	animation-iteration-count: infinite;
+	/*播放次数*/
+	animation-direction: alternate;
+	/*逆向播放*/
+	animation-play-state: running;
+	/*正在运行*/
+}
+
+@keyframes beat {
+	0% {
+		bottom: 50px;
+	}
+
+	100% {
+		bottom: 55px;
+	}
+}
+
+.slide_show {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.slide_show * {
+	outline: none;
+}
+
+.slide_show li img {
+	width: 100%;
+	overflow: hidden;
+	-webkit-transition: all 3s cubic-bezier(0.7, 0.5, 0.3, 1);
+	transition: all 3s cubic-bezier(0.7, 0.5, 0.3, 1);
+}
+
+.slide_show .pc_first_page_slide.slick-active img {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+li.one {
+	z-index: 4;
+}
+
+li.two {
+	z-index: 3;
+}
+
+li.three {
+	z-index: 2;
+}
+
+li.four {
+	z-index: 1;
+}
+
+li.current {
+	/* clip:rect(0,1600px,970px,0); */
+	z-index: 9;
+	animation: mymove 1s linear 0s forwards;
+}
+
+@keyframes mymove {
+	from {
+		clip: rect(0, 2000px, 970px, 0);
+	}
+
+	to {
+		clip: rect(0, 2000px, 970px, 2000px);
+	}
+}
+
+.activeImg {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}

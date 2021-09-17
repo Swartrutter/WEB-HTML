@@ -1,0 +1,67 @@
+/* CSS Document */ 
+
+* { 				/*清除不同浏览器的不同外边距*/
+	margin: 0; 
+	padding: 0; 
+}
+
+#menu { 
+	margin-left: auto;
+	margin-right: auto;
+	width: 260px; 
+	position: relative; 
+	top: 0px; 
+	left: 0px;
+}
+
+#menu ul,li{ 
+	list-style-type: none; 
+} 
+
+#rightMenu { 
+	background-image: url(./images/navout.jpg); 
+}
+
+#rightMellu>ul>li {
+	color: #33.3; 
+	height: 43px; 
+	line-height: 43px; 
+	font-size: 16px;
+	width: 260px; 
+	font-family: "微软雅黑"; 
+	background-repeat: no-repeat; 
+} 
+
+#rightMenu>ul>li>span{
+	padding-left: 100px;
+}
+
+.leftMenu { 
+	width: 80px; 
+	background: #000; 
+	opacity: 0.5; 
+	-moz-opacity: 0.5; 
+	filter: alpha(opacity=80);
+	height: 326px; 
+	position: absolute;
+	left: -95px; 
+	top: 0px; 
+	z-index: 999; 
+	padding: lOpx lOpx; 
+	overflow: hidden; 
+	display: none; 
+} 
+
+.leftMenu li{
+	width:80px; 
+}
+
+.leftMenu a{
+	color: #fcfcfc; 
+	font-size: l2px; 
+	text-decoration: none; 
+	padding-left: 12px; 
+	height: 30px; 
+	line-height: 30px; 
+	overflow: hidden; 
+}
